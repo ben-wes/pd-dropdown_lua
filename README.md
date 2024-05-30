@@ -1,5 +1,5 @@
 ## Installation
-Files should be placed in Pd's external folder in additional `dropdown_lua` subfolder.
+Files should be placed in Pd's external folder in additional `dropdown_lua` subfolder. Requires ELSE library or `pdlua` for lua support.
 
 ## Usage
 Create `dropdown_lua` object. For message examples, see help patch.
