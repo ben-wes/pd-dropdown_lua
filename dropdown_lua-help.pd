@@ -1,6 +1,6 @@
 #N canvas 150 513 1048 507 10;
 #X obj 53 252 dropdown_lua;
-#A saved;
+#A saved 1 2 3 4;
 #X msg 49 47 set 1 2 3 4;
 #X listbox 53 367 20 0 0 0 - - - 0;
 #X msg 283 73 edit;

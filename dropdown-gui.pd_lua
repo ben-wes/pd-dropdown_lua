@@ -52,6 +52,10 @@ function dropdown:in_1_hovercolor(x)
     end
 end
 
+function dropdown:output_entry()
+    self:outlet(1, "list", {self.selectedindex-1, self.entries[self.selectedindex]})
+end
+
 function dropdown:resize()
     self:repaint()
     if self.open then
@@ -92,7 +96,7 @@ end
 function dropdown:mouse_down(x, y)
     if self.open then
         self.selectedindex = y // self.lineheight + 1
-        self:outlet(1, "list", {self.selectedindex-1, self.entries[self.selectedindex]})
+        self:output_entry()
     end
     self.open = not self.open
     self:resize()
@@ -138,5 +142,5 @@ function dropdown:paint(g)
 end
 
 function dropdown:in_1_bang()
-    self:outlet(1, "list", {self.selectedindex-1, self.entries[self.selectedindex]})
+    self:output_entry()
 end
