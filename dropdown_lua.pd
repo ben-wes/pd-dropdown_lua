@@ -2,7 +2,7 @@
 #X declare -lib pdlua -path pdlua;
 #X obj 703 142 declare -lib pdlua -path pdlua;
 #X obj 703 115 namecanvas \$0-dropdown-wrapper;
-#X obj 100 400 dropdown-gui;
+#X obj 100 400 dropdown-gui 12.2296 276.207 24.4593 143 169 167 90 74 151 159 71 176 196 222 122;
 #X obj 424 361 s \$0-dropdown-wrapper;
 #X msg 424 340 coords 0 0 1 1 \$1 \$2 2 100 400;
 #X obj 35 363 outlet;
@@ -28,8 +28,10 @@
 #X obj 272 215 t b a;
 #X obj 300 244 list;
 #X obj 107 143 route bang edit set;
+#X obj 251 460 print;
 #X connect 2 0 5 0;
 #X connect 2 1 4 0;
+#X connect 2 1 28 0;
 #X connect 4 0 3 0;
 #X connect 6 0 27 0;
 #X connect 7 1 10 0;
@@ -56,4 +58,4 @@
 #X connect 27 1 9 0;
 #X connect 27 2 25 0;
 #X connect 27 3 2 0;
-#X coords 0 0 1 1 140 16 2 100 400;
+#X coords 0 0 1 1 276 24 2 100 400;
